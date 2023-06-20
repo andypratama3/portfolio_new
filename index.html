@@ -149,16 +149,16 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#" method="post">
+        <form onsubmit="sendEmail(); reset(); return false;">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Email Address">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="email" placeholder="Email Address">
             </div>
             <div class="input-box">
                 <input type="number" placeholder="Phone">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" id="subject" placeholder="Email Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Mesage"></textarea>
+            <textarea name="" id="desc" cols="30" rows="10" placeholder="Your Mesage"></textarea>
             <button type="sub" class="btn">Send Message</button>
         </form>
     </section>
@@ -174,7 +174,8 @@
 
 <script src="assets/js/script.js"></script>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    
 <script>
      const typed = new Typed('.multiple-text', {
         strings: ['FrontEnd Developer', 'BackEndDeveloper', 'Fulltack Developer'],
@@ -183,5 +184,19 @@
         backDelay: 1000,
         loop: true
     });
+
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "andypratama1211@gmail.com",
+    Password : "password",
+    To : 'them@website.com',
+    From : document.getElementById("email").val(),
+    Subject : document.getElementById("").val(),
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
 </script>
 </html>
