@@ -160,6 +160,7 @@ span {
 }
 .about-img img{
     width: 20vw;
+    filter : drop-shadow(0 0 20px blue);
 }
 .heading{
     text-align: center;
