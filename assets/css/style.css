@@ -78,7 +78,7 @@ section{
 
 .home-img img{
     width: 20vw;
-    filter : drop-shadow(0 0 20px blue);
+    filter : drop-shadow(0 0 20px #0ef);
     animation: floatImage 9s ease-in-out infinite;
 }
 
@@ -160,7 +160,7 @@ span {
 }
 .about-img img{
     width: 20vw;
-    filter : drop-shadow(0 0 20px blue);
+    filter : drop-shadow(0 0 20px #0ef);
 }
 .heading{
     text-align: center;
